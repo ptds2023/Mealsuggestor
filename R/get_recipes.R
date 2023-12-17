@@ -44,4 +44,3 @@ get_recipes <- function(data, ingredients = NULL, cuisine = NULL, diet = NULL, p
   return(data)
 }
 
-}
