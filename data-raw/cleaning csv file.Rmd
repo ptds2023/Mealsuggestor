@@ -12,7 +12,7 @@ packages <- c(
 
 )
 
-purrr::walk(packages, library, character.only = TRUE)
+#purrr::walk(packages, library, character.only = TRUE)
 
 
 opts_chunk$set(root.dir = '../Meal-sugestion/') 
@@ -85,7 +85,7 @@ recettes <- subset(recettes, select = -c(record_health, vote_count, author, tags
 
 ```{r}
 recettes$ingredients <- sapply(recettes$ingredients, function(x) paste(x, collapse = ", "))
-#write.csv(recettes, "recipes.csv", row.names = FALSE)
+write.csv(recettes, "recipes.csv", row.names = FALSE)
 
 ```
 
@@ -93,18 +93,18 @@ recettes$ingredients <- sapply(recettes$ingredients, function(x) paste(x, collap
 
 
 ```{r}
-recipes <- read_csv("recipes.csv")
+#recipes <- read_csv("recipes.csv")
 ```
 
 
 ```{r}
-na_rows_count <- sum(complete.cases(recipes) == FALSE)
-na_rows_count
+#na_rows_count <- sum(complete.cases(recipes) == FALSE)
+#na_rows_count
 ```
 
 
 ```{r}
-recipes <- na.omit(recipes)
+#recipes <- na.omit(recipes)
 ```
 
 
