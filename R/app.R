@@ -1,11 +1,11 @@
 library(shiny)
-library(Mealsuggestor)
+#library(Mealsuggestor)
 
 ui <- fluidPage(
   titlePanel("Recipe Finder"),
   sidebarLayout(
     sidebarPanel(
-      selectInput("cuisine", "Choose Cuisine:", choices = c("Italian", "French", "American")), # Update choices
+      selectInput("cuisine", "Choose Cuisine:", choices = c("Italian", "French", "American")),
       selectInput("diet", "Choose Diet:", choices = c("Vegan", "Vegetarian", "None")), # Update choices
       numericInput("n", "Number of Recipes:", 5),
       actionButton("submit", "Search")
