@@ -38,13 +38,6 @@ recipe_task <- tibble::tribble(
   "Slides", "7.1 Slides", "2023-12-18", "2023-12-20"
 )
 
-
-recipe_task_spots <- tibble::tribble(~activity, ~spot_type, ~spot_date,
-                                         "Data visualisation", "O", "2020-10-30",
-                                         "Writing", "O", "2020-10-31"
-)
-
-
 recipe_task_spots <- tibble::tribble(~activity, ~spot_type, ~spot_date,
                               "Timeline", "Zhiqi", "2023-12-03",
                               "1.1 ReadME", "Zhiqi", "2023-12-10",
@@ -62,7 +55,6 @@ recipe_task_spots <- tibble::tribble(~activity, ~spot_type, ~spot_date,
                               "6.1 Creation", "Efthimis", "2023-12-18",
                               "7.1 Slides", "Shuangfei", "2023-12-18"
                               )
-
 
 ```
 
