@@ -1,15 +1,19 @@
 Package: Mealsuggestor
-Title: What the Package Does (One Line, Title Case)
+Title: Recipe Filtering and Suggestion Tool
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    c(person("Samy", "Maurer", email = "samy.maurer@unil.ch"),
+      person("Zhiqi", "Freng", email = "zhiqi.feng@unul.ch"),
+      person("Efthimis", "Katsiapis", email = "efthimis.katsiapis@unil.ch")
+      person("Shuangfei", "Li", email = "shuangfei.li@unil.ch"))
+Description: This package provides tools to filter and suggest recipes based on user preferences such as cuisine, diet, and cooking times. It includes functions to sort recipes, select random recipes, and retrieve top-rated recipes.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Depends: 
     R (>= 2.10)
+Imports:
+    dplyr,
+    shiny
 LazyData: true
