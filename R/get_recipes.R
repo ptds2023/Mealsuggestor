@@ -10,8 +10,7 @@
 #' @return A data frame of filtered recipes.
 #' @examples
 #' get_recipes(data, ingredients = c("tomato", "chicken"),
-#'            cuisine = "Italian", diet = "Gluten Free",
-#'            prep_time_max = 30, cook_time_max = 60)
+#'            cuisine = "Italian", diet = "Gluten Free")
 #' @export
 get_recipes <- function(data, ingredients = NULL, cuisine = NULL, diet = NULL) {
   # Filter by ingredients
