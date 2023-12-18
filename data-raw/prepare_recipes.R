@@ -5,6 +5,7 @@
 #' @format A data frame with 6503 rows and 10 variables containing a large choice of meals: \describe{
 #'   \item{recipe_title}{Title of the recipe (character)}
 #'   \item{rating}{Average Rate of people on the recipe (numeric)}
+#'   \item{description}{Description of the meal (character)}
 #'   \item{cuisine}{Type of cuisine (character)}
 #'   \item{course}{At what time of the day is it generally eaten (character)}
 #'   \item{diet}{Dietary considerations (character)}
@@ -14,3 +15,4 @@
 #'   \item{instructions}{How to obtain the final meal from the ingredients (character)}
 #' }
 #' @source https://www.kaggle.com/datasets/sarthak71/food-recipes/
+usethis::use_data(recipes, overwrite = TRUE)
