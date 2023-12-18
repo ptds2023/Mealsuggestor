@@ -4,27 +4,16 @@
 \alias{get_recipes}
 \title{Filter Recipes Based on Various Criteria}
 \usage{
-get_recipes(
-  data,
-  ingredients = NULL,
-  cuisine = NULL,
-  diet = NULL,
-  prep_time_max = Inf,
-  cook_time_max = Inf
-)
+get_recipes(data, ingredients = NULL, cuisine = NULL, diet = NULL)
 }
 \arguments{
 \item{data}{Data frame containing the recipes.}
 
-\item{ingredients}{Vector of ingredients for filtering (optional).}
+\item{ingredients}{Vector of ingredients for filtering}
 
-\item{cuisine}{String specifying the cuisine type for filtering (optional).}
+\item{cuisine}{String specifying the cuisine type for filtering}
 
-\item{diet}{String specifying the diet type for filtering (optional).}
-
-\item{prep_time_max}{Numeric value for maximum preparation time in minutes (optional).}
-
-\item{cook_time_max}{Numeric value for maximum cooking time in minutes (optional).}
+\item{diet}{String specifying the diet type for filtering}
 }
 \value{
 A data frame of filtered recipes.
