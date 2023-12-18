@@ -1,0 +1,59 @@
+---
+title: "Timeline"
+author: "Group C"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# install package of ganttrify
+# install.packages("remotes")
+# remotes::install_github("giocomai/ganttrify")
+library(tibble)
+library(ganttrify)
+library(ggplot2)
+```
+
+
+```{r}
+# create data.frame recipe_task
+recipe_task <- tibble::tribble(
+  ~wp, ~activity, ~start_date, ~end_date,
+  "Description", "1.ReadME", "2023-12-01", "2023-12-20",
+  "Description", "2.Project proposal", "2023-12-01", "2023-12-10",
+  "Topic selection", "1.Data collection", "2023-12-01", "2023-12-04", 
+  "Topic selection", "2.First meeting", "2023-12-03", "2023-12-04",
+  "Data", "1.Data wrangling", "2023-12-05", "2023-12-08",
+  "Shiny app", "1.Structure", "2023-12-06", "2023-12-09",
+  "Shiny app", "2.Algorithm Design", "2023-12-08", "2023-12-12",
+  "Shiny app", "3.Optimization", "2023-12-12", "2023-12-15",
+  "Package", "1.Structure", "2023-12-10", "2023-12-14",
+  "Package", "2.Function code", "2023-12-14", "2023-12-16",
+  "Package", "3.Roxygen2", "2023-12-16", "2023-12-16",
+  "Package", "4.Test", "2023-12-17", "2023-12-18",
+  "Website", "1.Creation", "2023-12-18", "2023-12-20"
+)
+
+print(recipe_task)
+```
+
+
+```{r}
+gantt_plot <- ganttrify(
+  project = recipe_task,
+  by_date = TRUE,
+  exact_date = TRUE,
+  size_wp = 6,
+  size_activity = 4,
+  line_end_wp = "round",
+  line_end_activity = "butt",
+  month_date_label = TRUE,
+)
+print(gantt_plot)
+```
+
+
+
