@@ -24,6 +24,5 @@ cuisine, diet, maximum preparation time, and maximum cooking time.
 }
 \examples{
 get_recipes(data, ingredients = c("tomato", "chicken"),
-           cuisine = "Italian", diet = "Gluten Free",
-           prep_time_max = 30, cook_time_max = 60)
+           cuisine = "Italian", diet = "Gluten Free")
 }
