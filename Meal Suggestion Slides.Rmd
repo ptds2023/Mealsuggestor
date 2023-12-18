@@ -14,7 +14,7 @@ output:
       countIncrementalSlides: false
 ---
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+background-image: url("images/timeline.jpeg")
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -29,11 +29,16 @@ options(htmltools.dir.version = FALSE)
 
 ---
 # Our plan
-## Method we use
-## Inspireation 
-## Data Processing
-## Timeline and milestones
-## Management plan
+## 1. Method we use
+## 2. Inspireation 
+## 3. Data Processing
+## 4. Timeline and milestones
+## 5. Management plan
+---
+# Timeline
+
+.center[![](images/timeline.jpeg)]
+
 ---
 class: inverse, center, middle
 
