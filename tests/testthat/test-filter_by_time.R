@@ -3,5 +3,5 @@ test_that("filter_by_time works correctly", {
   result <- filter_by_time(data, max_prep_time = 30, max_cook_time = 20)
   expect_true(all(result$prep_time <= 30))
   expect_true(all(result$cook_time <= 20))
-  expect_equal(nrow(result), 2)
-
+  expect_equal(nrow(result), 2) # Assuming only one recipe meets these criteria
+})
