@@ -15,7 +15,7 @@
 get_recipes <- function(data, ingredients = NULL, cuisine = NULL, diet = NULL) {
   # Filter by ingredients
   if (!is.null(ingredients)) {
-    data <- data[grepl(paste(ingredients, collapse = "|"), data$ingredients), ]
+    data <- data[grepl(paste(tolower(ingredients), collapse = "|"), tolower(data$ingredients)), ]
   }
 
   # Filter by cuisine
