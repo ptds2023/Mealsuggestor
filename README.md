@@ -73,7 +73,7 @@ launch() we add this later
 
 # Contributing
 
-Your contributions can help make Meal Suggestor even better! If you have ideas for new features, enhancements, or find any bugs, please visit our GitHub repository to contribute or report issues.
+Your contributions can help make Meal Suggestor even better! If you have ideas for new features, enhancements, or find any bugs, please visit our [GitHub repository](https://github.com/ptds2023/Mealsuggestor) to contribute or report issues. 
 
 
 
