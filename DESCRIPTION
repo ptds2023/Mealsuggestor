@@ -1,0 +1,25 @@
+Package: Mealsuggestor
+Title: Recipe Filtering and Suggestion Tool
+Version: 0.0.0.9000
+Authors@R: 
+    c(person("Samy", "Maurer", email = "samy.maurer@unil.ch", role = c("aut", "cre")),
+      person("Zhiqi", "Freng", email = "zhiqi.feng@unul.ch", role = c("aut")),
+      person("Efthimis", "Katsiapis", email = "efthimis.katsiapis@unil.ch", role = c("aut")),
+      person("Shuangfei", "Li", email = "shuangfei.li@unil.ch", role = c("aut")))
+Description: This package provides tools to filter and suggest recipes based on user preferences such as cuisine, diet, and cooking times. It includes functions to sort recipes, select random recipes, and retrieve top-rated recipes.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: 
+    R (>= 2.10)
+Imports:
+    dplyr,
+    shiny,
+    tibble
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+LazyData: true
