@@ -3,7 +3,7 @@ title: "Meal Suggestion"
 subtitle: ""
 author: "Group e"
 institute: "HEC Lausanne"
-date: "2016/12/12"
+date: "2023/12/21"
 output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts]
@@ -12,40 +12,79 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      titlePage:
+        background-image: url("images/food.jpeg")
 ---
 
-background-image: url("images/timeline.jpeg")
+# Title
+## Subtitle
+{.title-slide}
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
+```{js}
+// JavaScript 代码，将 inverse 类添加到标题页上
+document.querySelector('.title-slide').classList.add('inverse');
 ```
 
 ---
 
-# Objective
+background-image: url("images/food.jpeg")
+background-position: center
+background-size: contain
 
-## Recommend recipes to users based on their needs. 
-### Users can obtain our recommended recipes by selecting information like cuisine, course, time, ingredient, etc. on our website.
+#Meal Suggestion Project
 
----
-# Our plan
-## 1. Method we use
-## 2. Inspireation 
-## 3. Data Processing
-## 4. Timeline and milestones
-## 5. Management plan
----
-# Timeline
-
-.center[![](images/timeline.jpeg)]
-
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
 ---
 class: inverse, center, middle
 
 # Overview
-## Data Wrankling
-## ShinyApp & R package
-## Website
+## 1. Objective 
+## 2. Methodology 
+## 3. Timeline and milestones
+## 4. Data Processing
+## 5. ShinyApp & R package
+## 6. Website
+---
+
+# 1. Objective
+
+## Designed to make meal planning easier and more enjoyable. 
+### Utilizing a comprehensive dataset of diverse recipes, our package offers tailored meal suggestions based on user preferences such as cuisine type, dietary restrictions, and preparation time. Whether you are a cooking enthusiast or just looking for daily meal inspiration, our package is here to help you explore a world of culinary possibilities.
+
+---
+
+# 2. Methodology
+
+## R packages
+## Others 
+
+---
+
+# 3. Timeline and milestones
+
+.center[![](images/timeline.jpeg)]
+
+---
+
+# 4. Data Processing
+
+## Data Source: kaggle
+## Dataset number: 8000+
+## Variables
+food recipes, approximate cooking and preparation times, cooking instructions,ingredients used, Recipe Author and Ratings
+## Processing
+- unnecessary columns were removed
+- certain columns underwent format conversion
+
+---
+
+# 5. ShinyApp & R package
+
+---
+
+# 6. Website
 
 ---
 
