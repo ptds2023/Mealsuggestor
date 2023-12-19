@@ -14,17 +14,7 @@ output:
       countIncrementalSlides: false
       titlePage:
         background-image: url("images/food.jpeg")
----
-
-# Title
-## Subtitle
-{.title-slide}
-
-```{js}
-// JavaScript 代码，将 inverse 类添加到标题页上
-document.querySelector('.title-slide').classList.add('inverse');
-```
-
+        
 ---
 
 background-image: url("images/food.jpeg")
@@ -51,13 +41,16 @@ class: inverse, center, middle
 # 1. Objective
 
 ## Designed to make meal planning easier and more enjoyable. 
-### Utilizing a comprehensive dataset of diverse recipes, our package offers tailored meal suggestions based on user preferences such as cuisine type, dietary restrictions, and preparation time. Whether you are a cooking enthusiast or just looking for daily meal inspiration, our package is here to help you explore a world of culinary possibilities.
+Utilizing a comprehensive dataset of diverse recipes, our package offers tailored meal suggestions based on user preferences such as cuisine type, dietary restrictions, and preparation time. Whether you are a cooking enthusiast or just looking for daily meal inspiration, our package is here to help you explore a world of culinary possibilities.
 
 ---
 
 # 2. Methodology
 
 ## R packages
+
+dplyr, shiny, tibble, devtools, testthat, shinythemes, htmltools
+
 ## Others 
 
 ---
@@ -81,6 +74,20 @@ food recipes, approximate cooking and preparation times, cooking instructions,in
 ---
 
 # 5. ShinyApp & R package
+
+## Features
+Cuisine Filter: Find meals from specific cuisines like Mexican, Italian, Indian, and more.
+Dietary Considerations: Filter recipes based on dietary needs such as vegetarian, vegan, or gluten-free options.
+Preparation and Cooking Time: Choose recipes based on the time you have available, from quick snacks to elaborate dinners.
+Ingredient-based Suggestions: Get recommendations based on ingredients you already have at home.
+
+---
+
+# 5. ShinyApp & R package
+
+## Mealsuggestor
+
+screenshot
 
 ---
 
