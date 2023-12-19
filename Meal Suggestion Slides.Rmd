@@ -34,8 +34,8 @@ class: inverse, center, middle
 ## 2. Methodology 
 ## 3. Timeline and milestones
 ## 4. Data Processing
-## 5. ShinyApp & R package
-## 6. Website
+## 5. Website
+## 6. ShinyApp & R package
 ---
 
 # 1. Objective
@@ -73,7 +73,12 @@ food recipes, approximate cooking and preparation times, cooking instructions,in
 
 ---
 
-# 5. ShinyApp & R package
+
+# 5. Website
+
+---
+
+# 6. ShinyApp & R package
 
 ## Features
 Cuisine Filter: Find meals from specific cuisines like Mexican, Italian, Indian, and more.
@@ -83,15 +88,12 @@ Ingredient-based Suggestions: Get recommendations based on ingredients you alrea
 
 ---
 
-# 5. ShinyApp & R package
+# 6. ShinyApp & R package
 
 ## Mealsuggestor
 
 screenshot
 
----
-
-# 6. Website
 
 ---
 
