@@ -61,84 +61,120 @@ mealApp <- function(){
   )
 
 
-server <- function(input, output, session) {
+  server <- function(input, output, session) {
 
-  # Show welcome message when the app starts
-  observe({
-    showModal(modalDialog(
-      title = "Welcome to Meal Suggestor!",
-      "Explore a variety of meals based on your preferences. Get started by selecting options on the left.",
-      easyClose = TRUE,
-      footer = NULL
-    ))
-  })
+    # Show welcome message when the app starts
+    observe({
+      showModal(modalDialog(
+        title = "Welcome to Meal Suggestor!",
+        "Explore a variety of meals based on your preferences. Get started by selecting options on the left.",
+        easyClose = TRUE,
+        footer = NULL
+      ))
+    })
 
-  # Reactive expression to filter and sort recipes based on user input
-  filteredRecipes <- reactive({
-    # Using get_recipes for basic filtering by cuisine, diet, etc.
-    basicFiltered <- get_recipes(data = recipes, cuisine = input$cuisine, diet = input$diet)
+    # Reactive expression to filter and sort recipes based on user input
+    filteredRecipes <- reactive({
+      # Using get_recipes for basic filtering by cuisine, diet, etc.
+      basicFiltered <- get_recipes(data = recipes, cuisine = input$cuisine, diet = input$diet, ingredients = input$ingredient)
 
-    # Further filtering by preparation and cooking time
-    timeFiltered <- filter_by_time(data = basicFiltered,
-                                   min_prep_time = input$prepTimeRange[1],
-                                   max_prep_time = input$prepTimeRange[2],
-                                   min_cook_time = input$cookTimeRange[1],
-                                   max_cook_time = input$cookTimeRange[2])
+      # Further filtering by preparation and cooking time
+      timeFiltered <- filter_by_time(data = basicFiltered,
+                                     min_prep_time = input$prepTimeRange[1],
+                                     max_prep_time = input$prepTimeRange[2],
+                                     min_cook_time = input$cookTimeRange[1],
+                                     max_cook_time = input$cookTimeRange[2])
 
-    # Sorting the filtered data
-    sortedRecipes <- sort_recipes(data = timeFiltered, sort_by = input$sortField, ascending = FALSE)
+      # Getting top n recipes
+      topnrecipes <- get_top_n_recipes(data = timeFiltered, n = input$numTopRecipes)
 
-    # Getting top n recipes
-    get_top_n_recipes(data = sortedRecipes, n = input$numTopRecipes)
-  })
+      # Sorting the filtered data
+      sort_recipes(data = topnrecipes, sort_by = input$sortField, ascending = FALSE)
 
-  # Dynamic UI for displaying filtered recipes
-  output$mealList <- renderUI({
-    meals <- filteredRecipes()
 
-    # Check if any meals are found
-    if (nrow(meals) > 0) {
-      # Create UI elements for displaying meals
-      # For example, using a simple list of meal titles
-      lapply(meals$recipe_title, function(title) {
-        div(class = "meal-item", title)
-      })
-    } else {
-      "No meals found based on your criteria."
-    }
-  })
+    })
 
-  # Handle the random recipe button click
-  observeEvent(input$randomRecipeButton, {
-    randomMeal <- random_recipe(data = recipes)
-    output$randomMealDetails <- renderUI({
-      if (!is.null(randomMeal)) {
-        # Create UI elements to display the details
-        h3(randomMeal$recipe_title)
-        # Add more details as needed
+    # Dynamic UI for displaying filtered recipes
+    output$mealList <- renderUI({
+      meals <- filteredRecipes()
+
+      # Check if any meals are found
+      if (nrow(meals) > 0) {
+        lapply(seq_len(nrow(meals)), function(i) {
+          div(class = "meal-item",
+              actionLink(inputId = paste("meal", i, sep = "_"), label = meals$recipe_title[i])
+          )
+        })
       } else {
-        "No random meal found."
+        "No meals found based on your criteria."
       }
     })
-  })
 
-  observeEvent(input$clearButton, {
-    # Reset the inputs to their default values
-    updateSelectInput(session, "cuisine", selected = "Choose")
-    updateSelectInput(session, "diet", selected = "Choose")
-    updateTextInput(session, "ingredient", value = "")
-    updateSliderInput(session, "prepTimeRange", value = c(10, 30))
-    updateSliderInput(session, "cookTimeRange", value = c(15, 45))
-    updateSliderInput(session, "numTopRecipes", value = 5)
-    updateSelectInput(session, "sortField", selected = "rating")
-    output$randomMealDetails <- renderUI({})
-  })
+    # Handle the random recipe button click
+    observeEvent(input$randomRecipeButton, {
+      randomMeal <- random_recipe(data = recipes)
+      output$randomMealDetails <- renderUI({
+        if (!is.null(randomMeal)) {
+          # Create UI elements to display the details
+          h3(randomMeal$recipe_title)
+          # Add more details as needed
+        } else {
+          "No random meal found."
+        }
+      })
+    })
+
+    observeEvent(input$clearButton, {
+      # Reset the inputs to their default values
+      updateSelectInput(session, "cuisine", selected = "Choose")
+      updateSelectInput(session, "diet", selected = "Choose")
+      updateTextInput(session, "ingredient", value = "")
+      updateSliderInput(session, "prepTimeRange", value = c(10, 30))
+      updateSliderInput(session, "cookTimeRange", value = c(15, 45))
+      updateSliderInput(session, "numTopRecipes", value = 5)
+      updateSelectInput(session, "sortField", selected = "rating")
+      output$randomMealDetails <- renderUI({})
+    })
+
+    selectedMeal <- reactiveVal()
+
+    observe({
+      meals <- filteredRecipes()
+      for (i in seq_len(nrow(meals))) {
+        local({
+          local_i <- i
+          observeEvent(input[[paste("meal", local_i, sep = "_")]], {
+            selectedMeal(meals[local_i, ])
+          })
+        })
+      }
+    })
+
+    output$mealDetails <- renderUI({
+      meal <- selectedMeal()
+      if (!is.null(meal)) {
+        instructions <- unlist(strsplit(meal$instructions, "\\|"))
+        instructionList <- lapply(instructions, function(instr) {
+          p(instr)
+        })
+        tagList(
+          h3("Recipe Title: ", meal$recipe_title),
+          h4("Cuisine: ", meal$cuisine),
+          h4("Diet: ", meal$diet),
+          h4("Preparation Time: ", meal$prep_time, " minutes"),
+          h4("Cooking Time: ", meal$cook_time, " minutes"),
+          h4("Ingredients:"),
+          p(meal$ingredients),
+          h4("Instructions:"),
+          do.call(tagList, instructionList)
+          # Add more meal details as needed
+        )
+      }
+    })
 
 
-
-
-}
-shinyApp(ui, server)
+  }
+  shinyApp(ui, server)
 }
 
 mealApp()
