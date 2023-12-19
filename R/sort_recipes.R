@@ -18,4 +18,3 @@ sort_recipes <- function(data, sort_by, ascending = TRUE) {
 
   return(sorted_data)
 }
-
