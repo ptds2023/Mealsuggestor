@@ -91,30 +91,52 @@ Select flavors and preferences, and discover meals that cater to your taste.
 - **Educational Aspect:** Encouraging users to explore new ingredients and cooking techniques.
 - **Health and Wellness:** Facilitating healthier eating choices by providing balanced meal suggestions.
 
-
-
----
-
-# 3. Timeline and milestones
-
-.center[![](images/timeline.png)]
+&lt;div style="text-align: center"&gt;
 
 ---
 
-# 4. Data Processing
+# Our Dataset
 
-## Data Source: Kaggle
-## Dataset number: 8000+
-## Variables
-food recipes, approximate cooking and preparation times, cooking instructions,ingredients used, Recipe Author and Ratings
-## Processing
-- unnecessary columns were removed
-- certain columns underwent format conversion
+- Source : Kaggle
+
+- Structure : 7990 rows and 16 columns
+
+- Variable : food recipes, cooking and preparation times, cooking instructions,ingredients, recipe Author and Ratings
+
+- Objective : Transformr raw data into structured, usable format fot the shiny app
+
+
+&lt;div style="text-align: center"&gt;
+---
+
+# Data Wrangling
+
+- Cleaning Process: Omitted missing values, ensuring data completeness.
+- Language Filtering: Employed language detection to retain only English descriptions.
+- Time Conversion: Transformed preparation and cooking time into usable numeric format.
+- Selective Retention: Removed non-essential columns to focus on key attributes :
+  - Recipe Title, Rating, Description, Cuisine, Course, Diet, Prep Time, Cook Time, Ingredients, Instructions
+- Secure the Data : save the final dataset as a .rda file. 
+
+
+&lt;style&gt;
+.middle {
+  margin-top: 150px; 
+}
+&lt;/style&gt;
 
 ---
 
 
-# 5. Website
+# Package Functions
+
+We have a total of 5 functions for our package : 
+
+- &lt;b&gt;filter_by_time&lt;/b&gt;
+- &lt;b&gt;get_recipes&lt;/b&gt;
+- &lt;b&gt;get_top_n_recipes&lt;/b&gt;
+- &lt;b&gt;random_recipe&lt;/b&gt;
+- &lt;b&gt;sort_recipes&lt;/b&gt;
 
 
 &lt;video width="640" height="360" controls&gt;
@@ -124,25 +146,23 @@ food recipes, approximate cooking and preparation times, cooking instructions,in
 
 ---
 
-# 6. ShinyApp &amp; R package
+# get_recipes
+This function filters the recipes dataset based on provided criteria such as ingredients,cuisine, diet. 
 
-## Features
-### Cuisine Filter
-Find meals from specific cuisines like Mexican, Italian, Indian, and more.
-### Dietary Considerations
-Filter recipes based on dietary needs such as vegetarian, vegan, or gluten-free options.
-### Preparation and Cooking Time
-Choose recipes based on the time you have available, from quick snacks to elaborate dinners.
-### Ingredient-based Suggestions
-Get recommendations based on ingredients you already have at home.
 
 ---
-# 6.1 R package
+# filter_by_time
+This function filters recipes based on specified minimum and maximum preparation and cooking times.
 
-Package Source
+---
 
-url:https://github.com/ptds2023/Mealsuggestor/tree/main
+# get_top_n_recipes
+This function retrieves the top N rated recipes from the dataset based on user ratings.
 
+---
+
+# random_recipe
+This function selects a random recipe from the datase to suprise the customer
 ---
 
 # 6.2 ShinyApp
@@ -184,6 +204,25 @@ class: inverse, center, middle
   &lt;div class="custom-font"&gt;Thank you!&lt;/div&gt;
 &lt;/html&gt;
 
+
+.center[![](images/timeline.png)]
+
+
+
+## Features
+### Cuisine Filter
+Find meals from specific cuisines like Mexican, Italian, Indian, and more.
+### Dietary Considerations
+Filter recipes based on dietary needs such as vegetarian, vegan, or gluten-free options.
+### Preparation and Cooking Time
+Choose recipes based on the time you have available, from quick snacks to elaborate dinners.
+### Ingredient-based Suggestions
+Get recommendations based on ingredients you already have at home.
+
+
+Package Source
+
+url:https://github.com/ptds2023/Mealsuggestor/tree/main
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
