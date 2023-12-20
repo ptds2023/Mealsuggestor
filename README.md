@@ -31,7 +31,7 @@ To install the Meal Suggestion package, use the following command in R:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("ptds2023/MealSuggestion")
+devtools::install_github("ptds2023/Mealsuggestor")
 ```
 
 # Functions
