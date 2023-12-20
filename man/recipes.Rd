@@ -7,7 +7,7 @@ Recipes for mealgenerator
 \description{
 %%  ~~ A concise (1-5 lines) description of the dataset. ~~
 }
-\usage{data("recipes")}
+\usage{data("recipes.rda")}
 \format{
   A data frame with 6503 observations on the following 10 variables.
   \describe{
