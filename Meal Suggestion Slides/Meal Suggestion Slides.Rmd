@@ -229,19 +229,9 @@ Future Enhancements:
 
 ---
 
-class: inverse, center, middle
+class: center, middle
 
 <html>
-  <style>
-    .custom-font {
-      font-weight: bold;
-      font-size: 4em;
-    }
-  </style>
   <div class="custom-font">Thank you!</div>
 </html>
 
-
-Package Source
-
-url:https://github.com/ptds2023/Mealsuggestor/tree/main
