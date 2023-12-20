@@ -5,9 +5,8 @@
 Recipes for mealgenerator
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+A dataset containing various recipes with details such as cuisine, diet, ingredients, and rating in order to be used in our package.
 }
-\usage{data("recipes.rda")}
 \format{
   A data frame with 6503 observations on the following 10 variables.
   \describe{
@@ -23,17 +22,11 @@ Recipes for mealgenerator
     \item{\code{instructions}}{a character vector}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
-\references{
-%%  ~~ possibly secondary sources and usages ~~
+\url{https://www.kaggle.com/datasets/sarthak71/food-recipes/}
 }
 \examples{
 data(recipes)
 ## maybe str(recipes) ; plot(recipes) ...
 }
-\keyword{datasets}
+\keyword{recipes}

@@ -23,6 +23,6 @@ This function filters the recipes dataset based on provided criteria such as ing
 cuisine, diet, maximum preparation time, and maximum cooking time.
 }
 \examples{
-get_recipes(data, ingredients = c("tomato", "chicken"),
+get_recipes(recipes, ingredients = c("tomato", "chicken"),
            cuisine = "Italian", diet = "Gluten Free")
 }
