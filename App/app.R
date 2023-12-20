@@ -178,4 +178,4 @@ mealApp <- function(){
   shinyApp(ui, server)
 }
 
-mealApp()
+

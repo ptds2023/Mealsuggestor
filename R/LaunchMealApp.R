@@ -9,11 +9,6 @@
 #' @examples
 #' launchMealApp()
 launchMealApp <- function() {
-  appDir <- "~/Mealsuggestor/App"
-  if (file.exists(appDir)) {
-    shiny::runApp(appDir)
-  } else {
-    stop("App directory not found in package.")
-  }
+  mealApp()  # Directly call the mealApp function
 }
 
