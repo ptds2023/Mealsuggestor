@@ -68,7 +68,7 @@ Organize your recipe search results with `sort_recipes()` based on criteria like
 
 ```r
 # Launch the Shiny app for interactive meal planning
-launch() we add this later 
+LaunchMealApp()
 ```
 
 # Contributing
