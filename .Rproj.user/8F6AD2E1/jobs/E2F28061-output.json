@@ -1,0 +1,8 @@
+[1,"Installing 'shinythemes' ...\n"]
+[2,"trying URL 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/contrib/4.3/shinythemes_1.2.0.tgz'\n"]
+[2,"Content type 'application/x-gzip' length 978511 bytes (955 KB)\n====="]
+[2,"=================="]
+[2,"===========================\ndownloaded 955 KB\n\n"]
+[1,"The downloaded binary packages are in\n"]
+[1,"\t/var/folders/ry/s9gpl_s93w522wh0pbnhjgz00000gp/T//RtmptkLNGw/downloaded_packages\n"]
+[2,"\n\n✔ Package 'shinythemes' successfully installed.\n"]
