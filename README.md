@@ -31,7 +31,7 @@ To install the Meal Suggestion package, use the following command in R:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("...../MealSuggestion")
+devtools::install_github("ptds2023/MealSuggestion")
 ```
 
 # Functions
@@ -68,8 +68,13 @@ Organize your recipe search results with `sort_recipes()` based on criteria like
 
 ```r
 # Launch the Shiny app for interactive meal planning
-LaunchMealApp()
+launchMealApp()
 ```
+
+# Website 
+
+Here is our [website]()
+
 
 # Contributing
 

@@ -2,6 +2,10 @@ pandoc: 3.1.1
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
-  Article: Article.html
-last_built: 2023-12-20T14:31Z
+  filter_by_time: filter_by_time.html
+  get_recipes: get_recipes.html
+  random_recipe: random_recipe.html
+  sort_recipes: sort_recipes.html
+  Using Meal Suggestor App: Using Meal Suggestor App.html
+last_built: 2023-12-20T18:18Z
 

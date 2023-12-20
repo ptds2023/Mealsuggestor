@@ -1,0 +1,74 @@
+---
+title: "Using the Meal Suggestor Shiny App"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using Meal Suggestor App}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Introduction
+
+This vignette provides a step-by-step guide on how to use the Meal Suggestor Shiny app included in the `Mealsuggestor` package. The app allows users to explore meal recipes based on various criteria like cuisine, diet, preparation time, and specific ingredients.
+
+# Getting Started
+
+
+## Launching the App
+
+
+Once installed, load the package and run the app:
+
+```{r retup}
+#library(Mealsuggestor)
+#mealApp()
+```
+
+
+
+# Using the App
+
+Follow these steps to navigate and use the Meal Suggestor app effectively:
+
+
+## Step 1: Selecting Criteria
+
+- **Choose a Cuisine:** Select your preferred cuisine from the dropdown menu.
+- **Select a Diet:** Choose a diet type (e.g., vegetarian, vegan).
+
+- **Enter Ingredients:** Optionally, input specific ingredients you want to include.
+
+## Step 2: Adjusting Time Sliders
+
+- **Preparation Time:** Set the range for the desired preparation time.
+- **Cooking Time:** Choose the cooking time range.
+
+## Step 3: Viewing Recipes
+
+- **Sort Recipes:** Select the sorting criteria (e.g., rating, prep time).
+ - **View the List:** The meal list updates based on your selections.
+
+## Step 4: Exploring Meal Details
+
+- **Select a Meal:** Click on a meal title to view its details.
+
+- **Read Meal Information** The app displays detailed information including ingredients and cooking instructions.
+
+
+## Step 5: Using Additional Features
+
+ - **Random Meal:** Click "I do not know what I want..." for a random suggestion.
+ - **Clear Selections:** Use the "Clear Selections" button to reset all fields.
+
+# Conclusion
+
+
+The Meal Suggestor Shiny app in the Mealsuggestor package offers an interactive and user-friendly way to discover meal recipes tailored to your preferences. By following these steps, users can easily navigate the app to find meal ideas that match their dietary needs and time constraints.
+

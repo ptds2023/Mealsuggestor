@@ -1,0 +1,51 @@
+---
+title: "Function: sort_recipes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Function: sort_recipes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+## Overview
+
+The `sort_recipes` function in the `Mealsuggestor` package enables users to sort recipes based on a specified criterion, such as rating or preparation time. This functionality is essential for organizing recipes according to specific needs or preferences.
+
+## Parameters
+
+- `data`: A data frame containing the recipes.
+- `sort_by`: The column name to sort by (e.g., "rating", "prep_time").
+- `ascending`:  if `TRUE`, sorts in ascending order, else in descending order. Default is `TRUE`.
+
+## Returns
+
+This function returns a sorted data frame of recipes based on the specified criteria.
+
+## Example Usage
+
+The following example demonstrates how to use the `sort_recipes` function to sort recipes by rating in descending order:
+
+```{r sort-recipes-example, eval=FALSE}
+library(Mealsuggestor)
+
+sorted_recipes <- sort_recipes(data = recipes, sort_by = "rating", ascending = FALSE)
+
+# Display the sorted recipes
+print(sorted_recipes)
+
+```
+
+
+
+
+
+
+

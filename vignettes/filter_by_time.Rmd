@@ -1,0 +1,47 @@
+---
+title: "Function: filter_by_time"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Function: filter_by_time}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+
+## Overview
+
+The `filter_by_time` function in the `Mealsuggestor` package is designed to filter recipes based on preparation and cooking times. It allows users to specify minimum and maximum limits for both preparation and cooking times to narrow down the recipe choices according to their time constraints.
+
+## Parameters
+
+- `data`: A data frame containing the recipes.
+- `min_prep_time`: Minimum allowed preparation time in minutes. Default is 0.
+- `max_prep_time`: Maximum allowed preparation time in minutes. Default is `Inf` (infinity).
+- `min_cook_time`: Minimum allowed cooking time in minutes. Default is 0.
+- `max_cook_time`: Maximum allowed cooking time in minutes. Default is `Inf`.
+
+## Returns
+
+This function returns a data frame containing recipes that meet the specified time criteria.
+
+## Example Usage
+
+The following example demonstrates how to use the `filter_by_time` function to filter recipes with specific preparation and cooking time constraints:
+
+```{r filter-by-time-example, eval=FALSE}
+library(Mealsuggestor)
+
+filtered_recipes <- filter_by_time(data = recipes,
+                                   min_prep_time = 10, max_prep_time = 30,
+                                   min_cook_time = 20, max_cook_time = 60)
+
+# Display the filtered recipes
+print(filtered_recipes)

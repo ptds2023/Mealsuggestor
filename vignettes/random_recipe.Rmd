@@ -1,0 +1,41 @@
+---
+title: "Function: random_recipe"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Function: random_recipe}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Overview
+
+The `random_recipe` function in the `Mealsuggestor` package is designed to select a random recipe from the dataset. This function is perfect for users who want a bit of surprise and are open to trying something new without specific preferences in mind.
+
+## Parameters
+
+- `data`: A data frame containing the recipes.
+
+## Returns
+
+This function returns a single randomly selected recipe from the provided dataset.
+
+## Example Usage
+
+The following example shows how to use the `random_recipe` function to randomly select a recipe from a dataset:
+
+```{r random-recipe-example, eval=FALSE}
+library(Mealsuggestor)
+
+# Example dataset 
+
+randomly_selected_recipe <- random_recipe(data = recipes)
+
+# Display the randomly selected recipe
+print(randomly_selected_recipe)

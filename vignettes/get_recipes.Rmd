@@ -1,0 +1,46 @@
+---
+title: "Function: get_recipes"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Function: get_recipes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+## Overview
+
+The `get_recipes` function in the `Mealsuggestor` package allows users to filter recipes based on various criteria, including ingredients, cuisine, and diet. This function is ideal for users who want to find recipes that match specific dietary needs or culinary preferences.
+
+## Parameters
+
+- `data`: A data frame containing the recipes.
+- `ingredients`: A vector of ingredients to filter the recipes. If `NULL`, this filter is not applied.
+- `cuisine`: A string specifying the cuisine type. If `NULL`, this filter is not applied.
+- `diet`: A string specifying the diet type (e.g., Gluten-Free, Vegan). If `NULL`, this filter is not applied.
+
+## Returns
+
+This function returns a data frame containing recipes filtered based on the specified criteria.
+
+## Example Usage
+
+The following example shows how to use the `get_recipes` function to filter recipes by ingredients, cuisine, and diet:
+
+```{r get-recipes-example, eval=FALSE}
+library(Mealsuggestor)
+
+filtered_recipes <- get_recipes(recipes,
+                                ingredients = c("tomato", "chicken"),
+                                cuisine = "Italian",
+                                diet = "Gluten Free")
+
+# Display the filtered recipes
+print(filtered_recipes)

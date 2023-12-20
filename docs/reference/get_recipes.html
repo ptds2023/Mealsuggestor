@@ -26,7 +26,11 @@ cuisine, diet, maximum preparation time, and maximum cooking time."><!-- mathjax
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/Article.html">Article</a>
+    <a class="dropdown-item" href="../articles/filter_by_time.html">Function: filter_by_time</a>
+    <a class="dropdown-item" href="../articles/get_recipes.html">Function: get_recipes</a>
+    <a class="dropdown-item" href="../articles/random_recipe.html">Function: random_recipe</a>
+    <a class="dropdown-item" href="../articles/sort_recipes.html">Function: sort_recipes</a>
+    <a class="dropdown-item" href="../articles/Using%20Meal%20Suggestor%20App.html">Using the Meal Suggestor Shiny App</a>
   </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
@@ -81,9 +85,12 @@ cuisine, diet, maximum preparation time, and maximum cooking time.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_recipes</span><span class="op">(</span><span class="va">data</span>, ingredients <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"tomato"</span>, <span class="st">"chicken"</span><span class="op">)</span>,</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_recipes</span><span class="op">(</span><span class="va">recipes</span>, ingredients <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"tomato"</span>, <span class="st">"chicken"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>           cuisine <span class="op">=</span> <span class="st">"Italian"</span>, diet <span class="op">=</span> <span class="st">"Gluten Free"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in data$ingredients:</span> object of type 'closure' is not subsettable</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 0 × 10</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 10 variables: recipe_title &lt;chr&gt;, rating &lt;dbl&gt;, description &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   cuisine &lt;chr&gt;, course &lt;chr&gt;, diet &lt;chr&gt;, prep_time &lt;dbl&gt;, cook_time &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   ingredients &lt;chr&gt;, instructions &lt;chr&gt;</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
