@@ -7,9 +7,10 @@
 #' @return A data frame containing the top N rated recipes.
 #' @examples
 #' get_top_n_recipes(data = recipes, n = 5)
+#' @importFrom utils head
 #' @export
 get_top_n_recipes <- function(data, n = 5) {
-  # Assuming 'data' has a 'rating' column
+  # Rating column in data
   top_n_recipes <- head(data[order(data$rating, decreasing = TRUE), ], n)
   return(top_n_recipes)
 }
