@@ -1,17 +1,18 @@
 ---
-title: "Meal Suggestor"
-subtitle: ""
+title: "Meal Suggestor" 
+subtitle: "A Shiny App for Culinary Discovery"
 author: "Group e"
 institute: "HEC Lausanne"
 date: "2023/12/21"
 output:
   xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts]
-    lib_dir: libs
+    css: xaringan-themer.css
     nature:
+      slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
-      countIncrementalSlides: false
+      ratio: 16:9
+      countIncrementalSlides: true
         
 ---
 
@@ -36,13 +37,23 @@ class: inverse, center, middle
 ## 6. ShinyApp & R package
 ---
 
-# 1. Objective
+# A Meal Suggestor: A Gateway to Culinary Cretivity
 
+*Scenario*:
 
+- Picture an evening where culinary indecision looms.
+- Among a multitude of options, finding that perfect dish feels overwhelming.
 
-.middle[## Make meal planning easier and more enjoyable 
+*Our Approach*:
 
-Utilizing a comprehensive dataset of diverse recipes, our package offers tailored meal suggestions based on user preferences such as cuisine type, dietary restrictions, and preparation time. Whether you are a cooking enthusiast or just looking for daily meal inspiration, our package is here to help you explore a world of culinary possibilities.]
+- Merging culinary insights with digital innovation.
+- Streamlining your path to discovering delightful meals.
+
+*The Culinary Path*
+
+- A platform that makes meal discovery intuitive and fun.
+Select flavors and preferences, and discover meals that cater to your taste.
+- A tool for everyone, from cooking novices to kitchen pros.
 
 <style>
 .middle {
@@ -51,26 +62,22 @@ Utilizing a comprehensive dataset of diverse recipes, our package offers tailore
 </style>
 ---
 
-# 2. Methodology
+# Why a Mealsuggestor? 
 
-## R packages
+*Addressing the Everyday Dilemma:*
 
-.pull-left[
-### dplyr
-### shiny
-### tibble
-### devtools
-]
+- **The Challenge:** Everyone faces the "What to eat?" question. It's a daily decision that often leaves many indecisive or in a culinary rut.
+- **The Need:** A solution to help simplify meal decisions, cater to various dietary preferences, and introduce culinary diversity.
 
+*Empowering Personalized Meal Discovery:*
 
-.pull-right[
-### testthat
-### shinythemes
-### htmltools
-]
+- **Innovation:** Combining data-driven insights with user preferences to suggest meals that align with individual tastes, dietary needs, and cooking skills.
+- **Variety:** Offering a wide range of meal options from different cuisines, ensuring there's always something new to try.
 
+*The Bigger Picture:*
 
-
+- **Educational Aspect:** Encouraging users to explore new ingredients and cooking techniques.
+- **Health and Wellness:** Facilitating healthier eating choices by providing balanced meal suggestions.
 
 
 

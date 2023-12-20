@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Meal Suggestion</title>
+    <title>Meal Suggestor</title>
     <meta charset="utf-8" />
     <meta name="author" content="Group e" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
-    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script src="Meal-Suggestion-Slides_files/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
 .title[
-# Meal Suggestion
+# Meal Suggestor
+]
+.subtitle[
+## A Shiny App for Culinary Discovery
 ]
 .author[
 ### Group e
@@ -48,13 +49,23 @@ class: inverse, center, middle
 ## 6. ShinyApp &amp; R package
 ---
 
-# 1. Objective
+# A Meal Suggestor: A Gateway to Culinary Cretivity
 
+*Scenario*:
 
+- Picture an evening where culinary indecision looms.
+- Among a multitude of options, finding that perfect dish feels overwhelming.
 
-.middle[## Make meal planning easier and more enjoyable 
+*Our Approach*:
 
-Utilizing a comprehensive dataset of diverse recipes, our package offers tailored meal suggestions based on user preferences such as cuisine type, dietary restrictions, and preparation time. Whether you are a cooking enthusiast or just looking for daily meal inspiration, our package is here to help you explore a world of culinary possibilities.]
+- Merging culinary insights with digital innovation.
+- Streamlining your path to discovering delightful meals.
+
+*The Culinary Path*
+
+- A platform that makes meal discovery intuitive and fun.
+Select flavors and preferences, and discover meals that cater to your taste.
+- A tool for everyone, from cooking novices to kitchen pros.
 
 &lt;style&gt;
 .middle {
@@ -63,26 +74,22 @@ Utilizing a comprehensive dataset of diverse recipes, our package offers tailore
 &lt;/style&gt;
 ---
 
-# 2. Methodology
+# Why a Mealsuggestor? 
 
-## R packages
+*Addressing the Everyday Dilemma:*
 
-.pull-left[
-### dplyr
-### shiny
-### tibble
-### devtools
-]
+- **The Challenge:** Everyone faces the "What to eat?" question. It's a daily decision that often leaves many indecisive or in a culinary rut.
+- **The Need:** A solution to help simplify meal decisions, cater to various dietary preferences, and introduce culinary diversity.
 
+*Empowering Personalized Meal Discovery:*
 
-.pull-right[
-### testthat
-### shinythemes
-### htmltools
-]
+- **Innovation:** Combining data-driven insights with user preferences to suggest meals that align with individual tastes, dietary needs, and cooking skills.
+- **Variety:** Offering a wide range of meal options from different cuisines, ensuring there's always something new to try.
 
+*The Bigger Picture:*
 
-
+- **Educational Aspect:** Encouraging users to explore new ingredients and cooking techniques.
+- **Health and Wellness:** Facilitating healthier eating choices by providing balanced meal suggestions.
 
 
 
@@ -130,7 +137,7 @@ Choose recipes based on the time you have available, from quick snacks to elabor
 Get recommendations based on ingredients you already have at home.
 
 ---
-# 6.1 R package &amp; ShinyApp
+# 6.1 R package
 
 Package Source
 
@@ -138,7 +145,7 @@ url:https://github.com/ptds2023/Mealsuggestor/tree/main
 
 ---
 
-# 6. R package &amp; ShinyApp
+# 6.2 ShinyApp
 
 
 
@@ -149,7 +156,7 @@ url:https://github.com/ptds2023/Mealsuggestor/tree/main
 ---
 
 
-# 6. ShinyApp &amp; R package
+# 6.2 ShinyApp
 
 .pull-left[
 ![](images/shinyApp 2.jpeg)
@@ -181,9 +188,11 @@ class: inverse, center, middle
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"ratio": "16:9",
+"countIncrementalSlides": true
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
