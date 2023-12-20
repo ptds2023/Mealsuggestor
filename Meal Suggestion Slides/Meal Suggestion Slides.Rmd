@@ -1,5 +1,5 @@
 ---
-title: "Meal Suggestion"
+title: "Meal Suggestor"
 subtitle: ""
 author: "Group e"
 institute: "HEC Lausanne"
