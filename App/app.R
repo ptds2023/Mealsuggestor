@@ -113,6 +113,7 @@ mealApp <- function(){
     # Handle the random recipe button click
     observeEvent(input$randomRecipeButton, {
       randomMeal <- random_recipe(data = recipes)
+      selectedMeal(randomMeal)
       output$randomMealDetails <- renderUI({
         if (!is.null(randomMeal)) {
           # Create UI elements to display the details

@@ -31,7 +31,16 @@
     <loc>/reference/index.html</loc>
   </url>
   <url>
+    <loc>/reference/launchApp.html</loc>
+  </url>
+  <url>
+    <loc>/reference/launchMealApp.html</loc>
+  </url>
+  <url>
     <loc>/reference/random_recipe.html</loc>
+  </url>
+  <url>
+    <loc>/reference/recipes.html</loc>
   </url>
   <url>
     <loc>/reference/sort_recipes.html</loc>

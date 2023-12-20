@@ -17,4 +17,3 @@
 #' @source https://www.kaggle.com/datasets/sarthak71/food-recipes/
 #' @name prepare_recipes
 usethis::use_data(recipes, overwrite = TRUE)
-"recipes"

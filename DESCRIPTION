@@ -12,14 +12,14 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5.0)
 Imports:
-    dplyr,
-    shiny,
-    tibble
+    shiny
 Suggests:
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    htmltools,
+    tibble
 VignetteBuilder: knitr
 LazyData: true
