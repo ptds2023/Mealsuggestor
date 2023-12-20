@@ -30,6 +30,20 @@ class: center, middle, inverse, title-slide
 ---
 
 
+&lt;style&gt;
+.remark-slide-content {
+  font-size: 29px;
+}
+&lt;/style&gt;
+
+&lt;style&gt;
+.custom-font-size {
+  font-size: 20px;
+}
+&lt;/style&gt;
+
+---
+
 background-image: url("images/food.jpeg")
 background-position: center
 background-size: contain
@@ -37,42 +51,24 @@ background-size: contain
 #Meal Suggestion Project
 
 
----
-class: inverse, center, middle
 
-# Overview
-## 1. Objective 
-## 2. Methodology 
-## 3. Timeline and milestones
-## 4. Data Processing
-## 5. Website
-## 6. ShinyApp &amp; R package
+
+
 ---
 
 # A Meal Suggestor: A Gateway to Culinary Cretivity
 
-*Scenario*:
+You are alone and you feel that cooking the same pasta everyday get boring ? 
 
-- Picture an evening where culinary indecision looms.
-- Among a multitude of options, finding that perfect dish feels overwhelming.
+You want to train your cooking skills and discover new recipes everyday ? 
 
-*Our Approach*:
+You want to impress your partner ? 
 
-- Merging culinary insights with digital innovation.
-- Streamlining your path to discovering delightful meals.
+We have something for you !
 
-*The Culinary Path*
-
-- A platform that makes meal discovery intuitive and fun.
-Select flavors and preferences, and discover meals that cater to your taste.
-- A tool for everyone, from cooking novices to kitchen pros.
-
-&lt;style&gt;
-.middle {
-  margin-top: 150px; 
-}
-&lt;/style&gt;
 ---
+
+class: custom-font-size
 
 # Why a Mealsuggestor? 
 
@@ -97,13 +93,15 @@ Select flavors and preferences, and discover meals that cater to your taste.
 
 # Our Dataset
 
-- Source : Kaggle
+- **Initial tought:** Scrape from a recipe website OR find a large dataset with values that interested us
 
-- Structure : 7990 rows and 16 columns
+- **Source:** Kaggle
 
-- Variable : food recipes, cooking and preparation times, cooking instructions,ingredients, recipe Author and Ratings
+- **Structure:** 7990 rows and 16 columns
 
-- Objective : Transformr raw data into structured, usable format fot the shiny app
+- **Variable:** food recipes, cooking and preparation times, cooking instructions,ingredients, recipe Author and Ratings
+
+- **Objective:** Transform raw data into structured, usable format fot the shiny app
 
 
 &lt;div style="text-align: center"&gt;
@@ -111,12 +109,12 @@ Select flavors and preferences, and discover meals that cater to your taste.
 
 # Data Wrangling
 
-- Cleaning Process: Omitted missing values, ensuring data completeness.
-- Language Filtering: Employed language detection to retain only English descriptions.
-- Time Conversion: Transformed preparation and cooking time into usable numeric format.
-- Selective Retention: Removed non-essential columns to focus on key attributes :
+- **Cleaning Process:** Omitted missing values, ensuring data completeness.
+- **Language Filtering:** Employed language detection to retain only English descriptions.
+- **Time Conversion:** Transformed preparation and cooking time into usable numeric format.
+- **Selective Retention:** Removed non-essential columns to focus on key attributes :
   - Recipe Title, Rating, Description, Cuisine, Course, Diet, Prep Time, Cook Time, Ingredients, Instructions
-- Secure the Data : save the final dataset as a .rda file. 
+- **Secure the Data :** save the final dataset as a .rda file. 
 
 
 &lt;style&gt;
@@ -165,30 +163,55 @@ This function retrieves the top N rated recipes from the dataset based on user r
 This function selects a random recipe from the datase to suprise the customer
 ---
 
-# 6.2 ShinyApp
+# LaunchMealApp
+This function starts the Meal Suggestor Shiny application contained within the package
+---
 
+&lt;style&gt;
+.custom-font-size {
+  font-size: 10px;
+}
+&lt;/style&gt;
 
+# Our ShinyApp
 
-.pull-left[## Meal suggestor]
-
-.pull-right[![](images/shinyApp 1.jpeg)]
+![Shiny App](images/shinyApp 1.jpeg){width=30%}
 
 ---
 
+# Our ShinyApp
 
-# 6.2 ShinyApp
-
-.pull-left[
-![](images/shinyApp 2.jpeg)
-]
-
-.pull-right[
-![](images/shinyApp 3.jpeg)
-]
+![Shiny App](images/shinyApp 2.jpeg)
 
 ---
 
-# 7. Limitation &amp; Future Enhancement
+# Our ShinyApp
+
+![Shiny app](images/shinyApp 3.jpeg)
+---
+
+# Our Website
+
+
+---
+
+# Limitation &amp; Future Enhancement
+
+Limitations:
+
+- **Data Scope:** Currently, the Meal Suggestor relies on a static dataset, limiting its adaptability to evolving culinary trends.
+- **Personalization:** The app lacks user-specific customization like saving preferences or suggesting based on past selections.
+- **Complexity:** Some user interfaces may be too complex for novice users.
+
+
+Future Enhancements:
+
+**Dynamic Data Integration:** Incorporating real-time data for more varied and updated meal suggestions.
+**User Profiles:** Adding the ability to create user profiles for personalized suggestions and saved preferences.
+**Simplified UI:** Improving user interface for enhanced ease of use and accessibility.
+**Feedback System:** Implementing a user feedback system to refine and adapt meal suggestions.
+
+
 
 ---
 
@@ -230,8 +253,8 @@ url:https://github.com/ptds2023/Mealsuggestor/tree/main
 "slideNumberFormat": "%current%",
 "highlightStyle": "github",
 "highlightLines": true,
-"ratio": "16:9",
-"countIncrementalSlides": true
+"countIncrementalSlides": true,
+"ratio": "16:9"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
