@@ -67,6 +67,11 @@ Follow these steps to navigate and use the Meal Suggestor app effectively:
  - **Random Meal:** Click "I do not know what I want..." for a random suggestion.
  - **Clear Selections:** Use the "Clear Selections" button to reset all fields.
 
+
+<video width="480" height="270" controls>
+  <source src="video.mp4" type="video/mp4">
+</video>
+
 # Conclusion
 
 
