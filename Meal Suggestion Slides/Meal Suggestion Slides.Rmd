@@ -121,10 +121,24 @@ Get recommendations based on ingredients you already have at home.
 
 # 6. ShinyApp & R package
 
-## Mealsuggestor
 
-screenshot
 
+.pull-left[## Meal suggestor]
+
+.pull-right[![](images/shinyApp 1.jpeg)]
+
+---
+
+
+# 6. ShinyApp & R package
+
+.pull-left[
+![](images/shinyApp2.jpeg)
+]
+
+.pull-right[
+![](images/shinyApp3.jpeg)
+]
 
 ---
 

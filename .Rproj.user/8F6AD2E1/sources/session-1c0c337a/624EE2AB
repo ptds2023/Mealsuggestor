@@ -3,7 +3,7 @@
     "path": "~/Desktop/recipe/Meal Suggestion Slides/Meal Suggestion Slides.Rmd",
     "project_path": "Meal Suggestion Slides/Meal Suggestion Slides.Rmd",
     "type": "r_markdown",
-    "hash": "2849662275",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1703084783709.0,
@@ -11,14 +11,16 @@
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "137,0",
+        "scrollLine": "125"
     },
     "folds": "",
-    "lastKnownWriteTime": 1703084773,
+    "lastKnownWriteTime": 1703087884,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1703084773,
+    "last_content_update": 1703087884647,
     "read_only": false,
     "read_only_alternatives": []
 }
