@@ -1,0 +1,77 @@
+packages <- c(
+"knitr","plotly","dplyr","readr","shiny"
+)
+purrr::walk(packages, library, character.only = TRUE)
+opts_chunk$set(root.dir = '../Meal-sugestion/')
+recettes <- read.csv('food_recipes.csv')
+recettes <- na.omit(recettes)
+# Load the library
+library(cld2)
+# Redefine the is_english function with simplified logic
+is_english <- function(text) {
+# Check for NA or empty string
+if (is.na(text) || text == "") {
+return(FALSE)
+}
+# Perform language detection with error handling
+tryCatch({
+lang_detection <- detect_language(text)
+# Simplify the check to just look for "en" in the detection
+return(lang_detection[[1]] == "en" || lang_detection == "en")
+}, error = function(e) {
+# If there's an error, assume it's not English
+return(FALSE)
+})
+}
+# Apply the updated function to each description
+english_rows <- sapply(recettes$description, is_english)
+# Log the number of English rows detected
+cat("Number of English rows detected:", sum(english_rows), "\n")
+# Filter rows
+recettes <- recettes[english_rows, ]
+# Assuming df_clean is your cleaned dataframe
+# Remove 'M' and convert to numeric for prep_time
+recettes$prep_time <- as.numeric(gsub("M", "", recettes$prep_time))
+# Remove 'M' and convert to numeric for cook_time
+recettes$cook_time <- as.numeric(gsub("M", "", recettes$cook_time))
+# Convert the ingredients string to a list of ingredients
+recettes$ingredients <- strsplit(recettes$ingredients, "\\|")
+recettes <- subset(recettes, select = -c(record_health, vote_count, author, tags,url))
+recettes$ingredients <- sapply(recettes$ingredients, function(x) paste(x, collapse = ", "))
+#write.csv(recettes, "recipes.csv", row.names = FALSE)
+recipes <- read_csv("recipes.csv")
+knitr::opts_chunk$set(echo = FALSE)
+library(viridis)
+git checkout main
+devtools::install_github('yihui/xaringan')
+knitr::opts_chunk$set(echo=TRUE)
+library(extRemes)
+library(lubridate)
+library(dplyr)
+library(tidyverse)
+library(xts)
+library(evd)
+options(htmltools.dir.version = FALSE)
+# a boring regression
+fit = lm(dist ~ 1 + speed, data = cars)
+coef(summary(fit))
+dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
+grep('天', dojutsu, value = TRUE)
+par(mar = c(4, 4, 1, .1))
+plot(cars, pch = 19, col = 'darkgray', las = 1)
+abline(fit, lwd = 2)
+knitr::kable(head(iris), format = 'html')
+library(leaflet)
+leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 17)
+DT::datatable(
+head(iris, 10),
+fillContainer = FALSE, options = list(pageLength = 8)
+)
+xaringan:::inf_mr()
+xaringan:::inf_mr()
+xaringan:::inf_mr()
+unlink("Meal Suggestion Slides_cache", recursive = TRUE)
+unlink("Meal Suggestion Slides_cache", recursive = TRUE)
+xaringan:::inf_mr()
+xaringan:::inf_mr()
+xaringan:::inf_mr()
