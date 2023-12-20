@@ -7,8 +7,13 @@
 #' @export
 #'
 #' @examples
-#' launchMealApp()
+#' if (requireNamespace("shinythemes", quietly = TRUE)) {
+#'   launchMealApp()
 launchMealApp <- function() {
-  mealApp()  # Directly call the mealApp function
+  appDir <- "~/Mealsuggestor/App"
+  if (file.exists(appDir)) {
+    shiny::runApp(appDir)
+  } else {
+    stop("App directory not found.")
+  }
 }
-
