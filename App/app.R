@@ -110,6 +110,8 @@ mealApp <- function(){
       }
     })
 
+    selectedMeal <- reactiveVal()
+
     # Handle the random recipe button click
     observeEvent(input$randomRecipeButton, {
       randomMeal <- random_recipe(data = recipes)
@@ -117,7 +119,7 @@ mealApp <- function(){
       output$randomMealDetails <- renderUI({
         if (!is.null(randomMeal)) {
           # Create UI elements to display the details
-          h3(randomMeal$recipe_title)
+          h3(actionLink("randomMealLink", randomMeal$recipe_title))
           # Add more details as needed
         } else {
           "No random meal found."
@@ -137,7 +139,7 @@ mealApp <- function(){
       output$randomMealDetails <- renderUI({})
     })
 
-    selectedMeal <- reactiveVal()
+
 
     observe({
       meals <- filteredRecipes()

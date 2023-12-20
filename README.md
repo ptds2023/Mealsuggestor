@@ -73,7 +73,7 @@ launchMealApp()
 
 # Website 
 
-Here is our [website]()
+Here is our [website](https://ptds2023.github.io/Mealsuggestor/)
 
 
 # Contributing
