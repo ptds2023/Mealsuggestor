@@ -9,7 +9,7 @@
 #' @param diet String specifying the diet type for filtering
 #' @return A data frame of filtered recipes.
 #' @examples
-#' get_recipes(data, ingredients = c("tomato", "chicken"),
+#' get_recipes(recipes, ingredients = c("tomato", "chicken"),
 #'            cuisine = "Italian", diet = "Gluten Free")
 #' @export
 get_recipes <- function(data, ingredients = NULL, cuisine = NULL, diet = NULL) {
