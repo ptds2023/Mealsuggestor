@@ -35,8 +35,6 @@ background-image: url("images/food.jpeg")
 background-position: center
 background-size: contain
 
-# Meal Suggestion Project
-
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(
@@ -143,26 +141,48 @@ We have a total of 5 functions for our package :
 ---
 
 # get_recipes
-This function filters the recipes dataset based on provided criteria such as ingredients,cuisine, diet. 
+This function filters the recipes dataset based on provided criteria such as ingredients, cuisine, diet. 
 
+```{r, echo=FALSE, out.width='90%', out.extra='style="margin: auto; display: block;"'}
+knitr::include_graphics("images/get_recipes.jpg")
+```
 
 ---
 # filter_by_time
 This function filters recipes based on specified minimum and maximum preparation and cooking times.
 
+```{r, echo=FALSE, out.width='90%', out.extra='style="margin: auto; display: block;"'}
+knitr::include_graphics("images/filter_by_time.jpg")
+```
 ---
 
 # get_top_n_recipes
 This function retrieves the top N rated recipes from the dataset based on user ratings.
 
+```{r, echo=FALSE, out.width='90%', out.extra='style="margin: auto; display: block;"'}
+knitr::include_graphics("images/get_top_n_recipes.jpg")
+```
 ---
 
 # random_recipe
 This function selects a random recipe from the datase to suprise the customer
+
+
+
+```{r, echo=FALSE, out.width='70%', out.extra='style="margin: auto; display: block;"'}
+knitr::include_graphics("images/random_recipe.jpg")
+```
+
 ---
 
 # LaunchMealApp
 This function starts the Meal Suggestor Shiny application contained within the package
+
+```{r, echo=FALSE, out.width='80%', out.extra='style="margin: auto; display: block;"'}
+knitr::include_graphics("images/launchMealApp.jpg")
+```
+
+
 ---
 
 
@@ -198,7 +218,7 @@ knitr::include_graphics("images/Website 1.jpeg")
 
 # Our Website
 
-```{r, echo=FALSE, out.width='50%', fig.cap="Website 2", out.extra='style="margin: auto; display: block;"'}
+```{r, echo=FALSE, out.width='50%', out.extra='style="margin: auto; display: block;"'}
 knitr::include_graphics("images/Website 2.jpeg")
 ```
 
@@ -235,4 +255,3 @@ class: center, middle
   <div class="custom-font">Thank you!</div>
 </html>
 
----
